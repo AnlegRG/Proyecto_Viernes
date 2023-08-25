@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiAlmacen.Models;
 
 namespace WebApiAlmacen
 {
@@ -25,6 +27,13 @@ namespace WebApiAlmacen
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //traer la  cadena de conexion de app settings JSON
+            var conex = Configuration.GetConnectionString("conex");
+
+            //se  inicia la conexion
+            services.AddDbContext<BD_ALMACEN_CYSTELContext>(opt => opt.UseSqlServer(conex));
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
