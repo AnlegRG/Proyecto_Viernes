@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tmd+VrmV82diIprLs8dgKWYwfQ+Yvq8csibgCyezkLWPcbrrKaZX4t99y5yTwYGYWnrNcBZYijg7K+0bRQ4gyQ==",
+  "dgSpecHash": "H55xN2MByNGa/9SzkGUYA0MOLPsSdm28fNRSoel6ZCAGdXVO69ZsZB5YULpg5nquITgak5AR8iuPse8lU8LMxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\Desktop\\Repos\\WebApiAlmacen\\WebApiAlmacen\\WebApiAlmacen.csproj",
+  "projectFilePath": "C:\\Users\\andre\\Desktop\\Repos\\Proyecto_Viernes\\WebApiAlmacen\\WebApiAlmacen\\WebApiAlmacen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

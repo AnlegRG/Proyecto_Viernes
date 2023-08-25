@@ -5983,11 +5983,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\Desktop\\Repos\\WebApiAlmacen\\WebApiAlmacen\\WebApiAlmacen.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\Desktop\\Repos\\Proyecto_Viernes\\WebApiAlmacen\\WebApiAlmacen\\WebApiAlmacen.csproj",
       "projectName": "WebApiAlmacen",
-      "projectPath": "C:\\Users\\andre\\Desktop\\Repos\\WebApiAlmacen\\WebApiAlmacen\\WebApiAlmacen.csproj",
+      "projectPath": "C:\\Users\\andre\\Desktop\\Repos\\Proyecto_Viernes\\WebApiAlmacen\\WebApiAlmacen\\WebApiAlmacen.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\Desktop\\Repos\\WebApiAlmacen\\WebApiAlmacen\\obj\\",
+      "outputPath": "C:\\Users\\andre\\Desktop\\Repos\\Proyecto_Viernes\\WebApiAlmacen\\WebApiAlmacen\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
