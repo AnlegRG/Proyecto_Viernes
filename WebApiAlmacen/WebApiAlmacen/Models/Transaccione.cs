@@ -13,7 +13,6 @@ namespace WebApiAlmacen.Models
         public int? Cantidad { get; set; }
         public DateTime? FechaTransaccion { get; set; }
         public decimal? PrecioUnitario { get; set; }
-
         public virtual Producto IdproductoNavigation { get; set; }
     }
 }

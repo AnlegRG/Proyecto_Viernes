@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,18 +24,18 @@ namespace WebApiAlmacen.Controllers
 
         // GET: api/<AlmacenController>
         [HttpGet("GetProductos")]
-        public IActionResult GetProductos()
+        public async Task<IActionResult> GetProductos()
         {
-            var query = _db.Productos.ToList();
+            var query = await _db.Productos.ToListAsync();
 
             return Ok(query);
         }
 
         // GET api/<AlmacenController>/5
         [HttpGet("ProductoPor/{id}")]
-        public IActionResult GetProductoById(int id)
+        public async Task <IActionResult> GetProductoById(int id)
         {
-            var productoBuscado = _db.Productos.Find(id);
+            var productoBuscado = await _db.Productos.FindAsync(id);
 
             if (productoBuscado is null)
             {
@@ -45,16 +46,16 @@ namespace WebApiAlmacen.Controllers
         }
         // POST api/<AlmacenController>
         [HttpPost("CreateProducto")]
-        public IActionResult PostCrearProducto([FromBody] Producto producto)
+        public async Task<IActionResult> PostCrearProducto([FromBody] Producto producto)
         {
             var query = _db.Productos.Add(producto);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return CreatedAtAction(nameof(GetProductoById), new { id = producto.Idproducto }, producto);
         }
 
         // DELETE api/<AlmacenController>/5
         [HttpDelete("EliminarProducto/{id}")]
-        public IActionResult DeleteProducto(int id)
+        public async Task<IActionResult> DeleteProducto(int id)
         {
             var productoBuscado = _db.Productos.Find(id);
 
@@ -64,7 +65,7 @@ namespace WebApiAlmacen.Controllers
             }
 
             _db.Remove(productoBuscado);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return Ok(new { message = $"Producto Eliminado"});
         }
